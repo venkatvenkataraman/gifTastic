@@ -72,41 +72,27 @@ window.onload = function(){
   };
 
 
-  function rerenderGIFs() {
-    $( "#gifsAppearHere").empty();
-    for (var i = 0; i < results.length; i++) {
-    // Creating and storing a div tag
-    var animalDiv = $("<div/>");
-
-    // Creating a paragraph tag with the result item's rating
-    var p = $("<p>").text("Rating: " + results[i].rating);
-
-    // Creating and storing an image tag
-    var animalImage = $("<img>");
-
-    //Add a class to img tag
-    animalImage.addClass("gif");
-
-    // Setting the src attribute of the image to a property pulled off the result item
-    animalImage.attr("src", results[i].images.fixed_height.url);
-
-    animalImage.attr("data-animate", results[i].images.fixed_height.url);
-    animalImage.attr("data-still", results[i].images.fixed_height_still.url);
-    animalImage.attr("data-state", "animate");
-
-
-
-    // Appending the paragraph and image tag to the animalDiv
-    animalDiv.append(p);
-    animalDiv.append(animalImage);
-    // console.log(animalDiv);
-    // var idName="#col"+(i+1);
-    // console.log(idName);
-    // $('"#col"+(i+1)').empty();
-    // Prependng the animalDiv to the HTML page in the "#gifsAppearHere" div
-    $("#gifsAppearHere").prepend(animalDiv);
-
-  }
+  // function rerenderGIFs() {
+  //   $( "#gifsAppearHere").empty();
+  //   for (var i = 0; i < results.length; i++) {
+  //   // Creating and storing a div tag
+  //   var animalDiv = $("<div/>");
+  //   // Creating a paragraph tag with the result item's rating
+  //   var p = $("<p>").text("Rating: " + results[i].rating);
+  //   // Creating and storing an image tag
+  //   var animalImage = $("<img>");
+  //   //Add a class to img tag
+  //   animalImage.addClass("gif");
+  //   // Setting the src attribute of the image to a property pulled off the result item
+  //   animalImage.attr("src", results[i].images.fixed_height.url);
+  //   animalImage.attr("data-animate", results[i].images.fixed_height.url);
+  //   animalImage.attr("data-still", results[i].images.fixed_height_still.url);
+  //   animalImage.attr("data-state", "animate");
+  //   // Appending the paragraph and image tag to the animalDiv
+  //   animalDiv.append(p);
+  //   animalDiv.append(animalImage);
+  //   $("#gifsAppearHere").prepend(animalDiv);
+  // }
 
 
   // Adding click event listener to all buttons

@@ -1,0 +1,10 @@
+.btnClass{
+  color: #fff;
+  font-size: 16px;
+  background-color: #008080;
+  /* margin-left: 15px; */
+}
+
+#addAnAnimalForm{
+  float: right;
+}

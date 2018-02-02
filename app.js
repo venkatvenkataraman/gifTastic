@@ -45,7 +45,12 @@ window.onload = function(){
             var animalDiv = $("<div/>");
 
             // Creating a paragraph tag with the result item's rating
-            var p = $("<p>").text("Rating: " + results[i].rating);
+            var ratingNormalized = results[i].rating;
+            if (ratingNormalized == ""){
+               ratingNormalized = "No rating";
+            }
+            var p = $("<p>").text("Rating: " + ratingNormalized);
+            // var p = $("<p>").text("Rating: " + results[i].rating);
 
             // Creating and storing an image tag
             var animalImage = $("<img>");
@@ -61,11 +66,12 @@ window.onload = function(){
             animalImage.attr("data-still", results[i].images.fixed_height_still.url);
             animalImage.attr("data-state", "animate");
 
-            animalDiv.attr("id", "col" + i);
+            animalDiv.attr("id", "col" + (i+1));
 
             // Appending the paragraph and image tag to the animalDiv
-            animalDiv.append(p);
+
             animalDiv.append(animalImage);
+            animalDiv.append(p);
             // console.log(animalDiv);
             // var idName="#col"+(i+1);
             // console.log(idName);

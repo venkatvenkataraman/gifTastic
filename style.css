@@ -1,3 +1,12 @@
+#gifsAppearHere{
+    /* background-color: #000; */
+}
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
 .btnClass{
   color: #fff;
   font-size: 16px;
